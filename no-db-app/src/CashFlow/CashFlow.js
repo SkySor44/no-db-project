@@ -42,10 +42,14 @@ class CashFlow extends Component {
     render(){
         return(
             <div className = "">
-                <input className = "earned" type = "text" placeholder = "How much bacon am I bringing home?" onChange = {(e) => this.updateEarned(e.target.value)}/>
-                <input className = "spentOn" type = "text" placeholder = "What did I spend it on?" onChange ={(e) => this.updateSpentOn(e.target.value) }/>
-                <input className = "spent" type = "text" placeholder = "How much money am I giving away?" onChange = {(e) => this.updateSpent(e.target.value)}/>
-                <button onClick = {() => this.addToParent()}>Add</button>
+                <div className = "inputs">
+                    <input className = "earned" type = "text" placeholder = "Enter amount made..." onChange = {(e) => this.updateEarned(e.target.value)}/>
+                    <input className = "spentOn" type = "text" placeholder = "What did I spend it on?" onChange ={(e) => this.updateSpentOn(e.target.value) }/>
+                    <input className = "spent" type = "text" placeholder = "Enter amount spent..." onChange = {(e) => this.updateSpent(e.target.value)}/>
+                </div>
+                <div className = "add-btn-contain">
+                    <button className = "add-btn" onClick = {() => this.addToParent()}>ADD</button>
+                </div>
             </div>
         )
     }

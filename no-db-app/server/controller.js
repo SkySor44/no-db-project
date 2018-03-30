@@ -14,13 +14,13 @@ read: (req, res) => {
 },
 
 update: (req, res) => {
-    let {name, amount} = req.body;
+    let {amount} = req.body;
     const updateId = req.params.id;
     const transactionIndex = transactions.findIndex(transaction => transaction.id == updateId)
     let transaction = transactions[transactionIndex];
     transactions[transactionIndex] = {
         id: transaction.id,
-        name: name || transaction.name,
+        name: transaction.name,
         amount: amount || transaction.amount
     }
 
@@ -32,6 +32,11 @@ delete: (req, res) => {
     transactionIndex = transactions.findIndex(transaction => transaction.id == deleteId)
     transactions.splice(transactionIndex, 1);
 
+    res.status(200).send(transactions);
+},
+
+deleteAll: (req, res) => {
+    transactions = [];
     res.status(200).send(transactions);
 }
 }

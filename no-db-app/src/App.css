@@ -1,37 +1,128 @@
+
+
 .App {
+  min-height: 100vh;
+  width: 100%;
+  background: url(https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e8b82dbd7fe9677e9218686a427ea6d7&auto=format&fit=crop&w=750&q=80) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Shadows Into Light', cursive;
+  }
+
+  .delete-button-intro {
+    margin-right: 30px;
+    margin-top: 27px;
+  }
+
+.delete-all{
+  margin-top: 30px;
+  margin-right: 30px;
+  font-weight: 800;
+
+  
+}
+.delete-all:hover{
+  background: red;
+  font-size: 20px;
+  height: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.tracker{
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  font-size: 60px;
+}
+
+.titles {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-btn-contain{
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-btn {
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 10vw;
+  background: black;
+  color: white;
+  
+}
+
+.add-btn:active {
+  background: white;
+  color: black;
+  width: 12vw;
+  border: 2px solid black;
+  font-weight: bolder;
+}
+
+.earned {
+  border-radius: 20px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.spent-title {
+  margin-right: 25px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.spent {
+  border-radius: 20px;
+  text-align: center;
 }
 
-.App-title {
-  font-size: 1.5em;
+.spentOn {
+  border-radius: 20px;
+  text-align: center;
 }
 
-.App-intro {
-  font-size: large;
+.totals {
+  display: flex;
+  justify-content: space-around
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.earn-total {
+  color: green;
+  font-size: 30px;
 }
 
-/* Possible backgrounds */
-/* https://images.unsplash.com/photo-1515606378517-3451a4fa2e12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cb830c394f6c9d7275b1662668f291dd&auto=format&fit=crop&w=800&q=80 */
-/* https://images.unsplash.com/photo-1519377345644-937ef9754740?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=31a244fbe0532b092889aa568fa9e2c0&auto=format&fit=crop&w=829&q=80 */
-/* https://images.unsplash.com/photo-1459257831348-f0cdd359235f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7e537922f712f142b24cf9c897f0ab05&auto=format&fit=crop&w=750&q=80 */
-/* https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e8b82dbd7fe9677e9218686a427ea6d7&auto=format&fit=crop&w=750&q=80 */
-/* https://images.unsplash.com/photo-1521540216272-a50305cd4421?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5433224431f2cb232741669ea1a89dca&auto=format&fit=crop&w=627&q=80 */
+.spent-total {
+  color: red;
+  font-size: 30px;
+}
 
+.cash-contain {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
 
+.last-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 40px;
+}
+
+.listed-out {
+  display: flex;
+  justify-content: space-around;
+}
