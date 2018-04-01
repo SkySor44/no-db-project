@@ -92,7 +92,9 @@ console.log(res.data)
           <h3 className = "spent-title">Spent:</h3>
         </div>
         <CashFlow addTransactionFn = {this.addTransaction}/>
+        <div className = "section2">
         <AlreadySpent transactionsArr = {this.state.transactions} deleteTransactionFn = {this.deleteTransaction} updateAmountFn = {this.updateAmount}/>
+        </div>
         <div className = "last-btn">
           <DeleteAll deleteAllFn = {this.deleteAll} />
         </div>

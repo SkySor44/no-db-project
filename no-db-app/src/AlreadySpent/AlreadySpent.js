@@ -20,13 +20,14 @@ function AlreadySpent(props){
     
     return(
         <div>
-            <div className = "totals">
-                <h3 className = "earn-total">Earned: ${earned}</h3>
-                <h3 className = "spent-total">Spent: ${spent}</h3>
-            </div>  
             <div className = "cash-contain"> 
                 <h1>CASHFLOW: ${total}</h1>
             </div> 
+            <div className = "totals">
+                <h3 className = "earn-total">EARNED: ${earned}</h3>
+                <h3 className = "spent-total">SPENT: ${spent}</h3>
+            </div>  
+           
         {mappedTransactions} 
         
          </div> 

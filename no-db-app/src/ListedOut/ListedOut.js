@@ -33,11 +33,16 @@ class ListedOut extends Component{
     return(
         
         <div key = {this.props.transKey + this.props.transId} className = "listed-out">
-            <p>$$$: {this.props.amount} Transaction Name: {this.props.name}</p>
-            <button onClick = {() => deleteTransactionFn(this.props.transId)}>Delete Transaction</button>
-            <input type = "text" placeholder = "Enter Update Amount" onChange = {(e) => this.updateInput(e.target.value)}/>
-            <button onClick = {() => this.updateAmount()}>Change Amount</button>
+            <div className = "transaction-info">
+                <p>Transaction Name: {this.props.name}</p>
+                <p className = "amount" >${this.props.amount}</p>
+            </div>
             
+                <button className = 'transaction-button-1'  onClick = {() => deleteTransactionFn(this.props.transId)}>Delete Transaction</button>
+                <div className = "transaction-change">
+                <input type = "text" placeholder = "Enter Update Amount" onChange = {(e) => this.updateInput(e.target.value)}/>
+                <button className = 'transaction-button' onClick = {() => this.updateAmount()}>Change Amount</button>
+            </div>
         </div>
     );
     }
