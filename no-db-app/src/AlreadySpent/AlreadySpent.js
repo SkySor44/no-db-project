@@ -1,6 +1,7 @@
 import React from 'react'
 import ListedOut from '/../Users/skylersorensen/src/no-db-project/no-db-project/no-db-app/src/ListedOut/ListedOut'
 
+
 function AlreadySpent(props){
     var total = 0;
     var earned = 0;
@@ -10,6 +11,8 @@ function AlreadySpent(props){
        total += +e.amount;
        earned += +e.amount > 0 ? +e.amount : null;
        spent += +e.amount < 0 ? +e.amount : null;
+
+       
     
     return (
         <div key = {i}>

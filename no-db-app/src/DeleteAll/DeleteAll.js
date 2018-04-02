@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import FaTrash from 'react-icons/lib/fa/trash'
 
 class DeleteAll extends Component{
     constructor(){
@@ -15,7 +16,7 @@ class DeleteAll extends Component{
     return(
         <div>
             
-            <button className = 'delete-all' onClick = {() => this.deleteEverything()}>DELETE ALL</button>
+            <button className = 'delete-all' onClick = {() => this.deleteEverything()}>DELETE ALL<FaTrash/></button>
         </div>
     )
     } 

@@ -26,27 +26,38 @@
   margin-right: 30px;
   font-weight: 800;
   font-family: 'Oswald', sans-serif;
+  border-radius: 20px;
 
   
 }
 .delete-all:hover{
-  background: red;
-  font-size: 20px;
-  height: 20px;
+  background: none;
+ 
   font-weight: bold;
   border-radius: 20px;
+  border: 1px solid red;
+  color: red;
 }
 
 .tracker{
   font-family: 'Shadows Into Light', cursive;
   text-align: center;
   font-size: 60px;
+  margin-right: 25px;
+
 }
+
 
 .titles {
   display: flex;
   justify-content: space-around;
   font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+  text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+    1px 1px 0 white;
 }
 
 .inputs {
@@ -60,21 +71,23 @@
 }
 
 .add-btn {
-  border: none;
+  border: 1px solid black;
   border-radius: 20px;
   margin-top: 20px;
   width: 10vw;
-  background: black;
-  color: white;
+  background: none;
+  color: black;
   font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+
   
 }
 
-.add-btn:active {
+.add-btn:hover {
   background: white;
   color: black;
-  width: 12vw;
-  border: 2px solid black;
+  width: 10vw;
+  border: 1px solid black;
   font-weight: bolder;
 }
 
@@ -82,6 +95,7 @@
   border-radius: 20px;
   text-align: center;
 }
+
 
 .spent-title {
   margin-right: 25px;
@@ -115,6 +129,10 @@
   font-family: 'Oswald', sans-serif;
 }
 
+.update-amt {
+  border-radius: 20px;
+}
+
 .cash-contain {
   display: flex;
   justify-content: space-around;
@@ -130,6 +148,7 @@
 
 .listed-out {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   font-family: 'Oswald', sans-serif;
   color: white;
@@ -162,6 +181,11 @@
   height: 25;
 }
 
+.transaction-button:hover{
+  border: 1px solid black;
+  background: none;
+}
+
 .transaction-button-1 {
   border-radius: 20px;
   font-family: 'Oswald', sans-serif;
@@ -173,13 +197,48 @@
 }
 
 .transaction-button-1:hover {
-  background: red;
-  font-size: 15px;
-  height: 25px;
+  background: none;
   font-weight: bold;
+  border: 1px solid red;
+  color: red;
 }
 
 .amount {
   text-align: center;
 }
 
+.date {
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content:flex-end; 
+  margin-right: 15px;
+  font-size: 15px;
+
+}
+
+.social-btn {
+background: none;
+border: 1px solid black;
+font-size: 15px;
+margin: 20px 20px;
+}
+
+.social-btn:hover{
+  background: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .icons {
+    display: none;
+  }
+}

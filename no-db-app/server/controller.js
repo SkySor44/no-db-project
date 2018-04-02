@@ -37,6 +37,7 @@ delete: (req, res) => {
 
 deleteAll: (req, res) => {
     transactions = [];
+    id = 0;
     res.status(200).send(transactions);
 }
 }

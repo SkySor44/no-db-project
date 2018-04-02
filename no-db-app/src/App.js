@@ -3,8 +3,11 @@ import './App.css';
 import CashFlow from './CashFlow/CashFlow.js'
 import AlreadySpent from './AlreadySpent/AlreadySpent.js'
 import DeleteAll from './DeleteAll/DeleteAll.js'
-
+import FaFacebookOfficial from 'react-icons/lib/fa/facebook-official'
+import FaTwitter from 'react-icons/lib/fa/twitter'
 import axios from 'axios'
+
+
 
 class App extends Component {
   constructor(){
@@ -16,6 +19,8 @@ class App extends Component {
     this.deleteTransaction = this.deleteTransaction.bind(this)
     this.updateAmount = this.updateAmount.bind(this)
     this.deleteAll = this.deleteAll.bind(this)
+
+   
   }
 
 componentDidMount(){
@@ -33,6 +38,8 @@ console.log(res.data)
   this.setState({
     total: newTotal
   })
+
+ 
 }
 
 
@@ -46,8 +53,9 @@ console.log(res.data)
         transactions: res.data
     })
   })
+  
 }
-
+  
   deleteAll(){
     axios.delete('/api/transactions').then(res => {
       this.setState({
@@ -78,6 +86,8 @@ console.log(res.data)
    })
  }
 
+
+
   render() {
     return (
       <div className="App">
@@ -98,6 +108,7 @@ console.log(res.data)
         <div className = "last-btn">
           <DeleteAll deleteAllFn = {this.deleteAll} />
         </div>
+        
       </div>
     );
   }
